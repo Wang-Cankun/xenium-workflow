@@ -1,0 +1,222 @@
+[
+  {
+    "trial": "trial-intake",
+    "input_subdirectory": "received",
+    "method": "Direct byte comparison against bytes.fromhex(snapshot value); no hashes computed.",
+    "snapshot_source_not_archived": "trial-intake-input-snapshot.json",
+    "snapshot_capture_timing": "Snapshot file has no embedded capture time; this audit does not independently establish capture chronology.",
+    "snapshot_file_count": 9,
+    "current_file_count": 9,
+    "missing_paths": [],
+    "additional_paths": [],
+    "files": [
+      {
+        "path": "regionA/README.md",
+        "snapshot_bytes": 168,
+        "current_bytes": 168,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionA/aux_outputs/morphology_focus_qc_masks/morphology.ome.tif",
+        "snapshot_bytes": 44,
+        "current_bytes": 44,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionA/cell_feature_matrix/barcodes.tsv.gz",
+        "snapshot_bytes": 45,
+        "current_bytes": 45,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionA/cell_feature_matrix/features.tsv.gz",
+        "snapshot_bytes": 66,
+        "current_bytes": 66,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionA/experiment.xenium",
+        "snapshot_bytes": 86,
+        "current_bytes": 86,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionB/README.md",
+        "snapshot_bytes": 168,
+        "current_bytes": 168,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionB/cell_feature_matrix/barcodes.tsv.gz",
+        "snapshot_bytes": 45,
+        "current_bytes": 45,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionB/cell_feature_matrix/features.tsv.gz",
+        "snapshot_bytes": 66,
+        "current_bytes": 66,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "regionB/download-note.txt",
+        "snapshot_bytes": 93,
+        "current_bytes": 93,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      }
+    ]
+  },
+  {
+    "trial": "trial-analysis",
+    "input_subdirectory": "package",
+    "method": "Direct byte comparison against bytes.fromhex(snapshot value); no hashes computed.",
+    "snapshot_source_not_archived": "trial-analysis-input-snapshot.json",
+    "snapshot_capture_timing": "After the trial started; earlier changes cannot be excluded.",
+    "snapshot_file_count": 5,
+    "current_file_count": 5,
+    "missing_paths": [],
+    "additional_paths": [],
+    "files": [
+      {
+        "path": "README.md",
+        "snapshot_bytes": 1194,
+        "current_bytes": 1194,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "annotations.csv",
+        "snapshot_bytes": 47,
+        "current_bytes": 47,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "coordinates.csv",
+        "snapshot_bytes": 53,
+        "current_bytes": 53,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "expression.h5ad",
+        "snapshot_bytes": 13504,
+        "current_bytes": 13504,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "sender-checksums.txt",
+        "snapshot_bytes": 82,
+        "current_bytes": 82,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      }
+    ]
+  },
+  {
+    "trial": "trial-scope",
+    "input_subdirectory": "deliveries",
+    "method": "Direct byte comparison against bytes.fromhex(snapshot value); no hashes computed.",
+    "snapshot_source_not_archived": "trial-scope-input-snapshot.json",
+    "snapshot_capture_timing": "Before the trial started, according to coordinator context; snapshot itself has no embedded capture time.",
+    "snapshot_file_count": 8,
+    "current_file_count": 8,
+    "missing_paths": [],
+    "additional_paths": [],
+    "files": [
+      {
+        "path": "additional/README.md",
+        "snapshot_bytes": 381,
+        "current_bytes": 381,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "additional/expression.h5ad",
+        "snapshot_bytes": 19712,
+        "current_bytes": 19712,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "empty-candidate/README.md",
+        "snapshot_bytes": 381,
+        "current_bytes": 381,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "empty-candidate/expression.h5ad",
+        "snapshot_bytes": 19712,
+        "current_bytes": 19712,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "explicit/README.md",
+        "snapshot_bytes": 381,
+        "current_bytes": 381,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "explicit/expression.h5ad",
+        "snapshot_bytes": 19712,
+        "current_bytes": 19712,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "unclear/README.md",
+        "snapshot_bytes": 381,
+        "current_bytes": 381,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "unclear/expression.h5ad",
+        "snapshot_bytes": 19712,
+        "current_bytes": 19712,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      }
+    ]
+  },
+  {
+    "trial": "trial-conflict",
+    "input_subdirectory": "received",
+    "method": "Direct byte comparison against bytes.fromhex(snapshot value); no hashes computed.",
+    "snapshot_source_not_archived": "trial-conflict-input-snapshot.json",
+    "snapshot_capture_timing": "Before the trial started, according to coordinator context; snapshot itself has no embedded capture time.",
+    "snapshot_file_count": 2,
+    "current_file_count": 2,
+    "missing_paths": [],
+    "additional_paths": [],
+    "files": [
+      {
+        "path": "README.md",
+        "snapshot_bytes": 474,
+        "current_bytes": 474,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      },
+      {
+        "path": "expression.h5ad",
+        "snapshot_bytes": 19712,
+        "current_bytes": 19712,
+        "current_equals_snapshot": true,
+        "archive_equals_current": true
+      }
+    ]
+  }
+]

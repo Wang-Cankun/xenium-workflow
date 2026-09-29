@@ -1,0 +1,71 @@
+{
+  "name": "Xenium workflow figures",
+  "version": 3,
+  "font_family": "Helvetica",
+  "font_size": 8,
+  "minimum_font_size": 7,
+  "width_mm": 183,
+  "single_column_mm": 89,
+  "axes_linewidth": 0.6,
+  "line_width": 1.0,
+  "dpi": 300,
+  "text_color": "#25282B",
+  "secondary_text_color": "#59616A",
+  "grid_color": "#E9EBEF",
+  "background": "#FFFFFF",
+  "palette": {
+    "Epi": "#D7856C",
+    "Imm": "#4B85A8",
+    "Mes": "#789784",
+    "Endo": "#9A89AD",
+    "Unknown": "#BABDC2"
+  },
+  "type_order": [
+    "Epi",
+    "Imm",
+    "Mes",
+    "Endo",
+    "Unknown"
+  ],
+  "type_labels": {
+    "Epi": "Epithelial",
+    "Imm": "Immune",
+    "Mes": "Mesenchymal",
+    "Endo": "Endothelial",
+    "Unknown": "Unknown"
+  },
+  "heatmap_cmap": "Blues",
+  "formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "font_required_family": "Helvetica",
+  "report": {
+    "page": {
+      "width_mm": 210,
+      "height_mm": 297,
+      "side_margin_mm": 21,
+      "vertical_margin_mm": 20
+    },
+    "typography": {
+      "body_pt": 11,
+      "title_pt": 18,
+      "heading1_pt": 13,
+      "heading2_pt": 11.5,
+      "caption_pt": 9.5,
+      "table_pt": 9.5,
+      "footer_pt": 9,
+      "paragraph_after_pt": 6,
+      "line_spacing": 1.15
+    },
+    "figure": {
+      "width_mm": 168,
+      "height_mm": 155,
+      "font_size": 8,
+      "minimum_font_size": 7,
+      "panel_font_size": 10
+    },
+    "font_family": "Arial"
+  }
+}

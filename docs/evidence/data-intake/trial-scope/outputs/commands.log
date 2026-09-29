@@ -1,0 +1,699 @@
+Working directory: <workspace>/trial-scope
+
+$ python skills/xenium-data-intake/scripts/inventory.py scan --help
+usage: inventory.py scan [-h] --scope-key SCOPE_KEY [--exclude RELPATH]
+                         [--skip RELPATH] --output OUTPUT
+                         root
+
+positional arguments:
+  root
+
+options:
+  -h, --help            show this help message and exit
+  --scope-key SCOPE_KEY
+                        Explicit identity of the agreed relative-path
+                        comparison scope
+  --exclude RELPATH     Agreed exclusion, exact path/subtree; repeatable
+  --skip RELPATH        Unexamined path/subtree; repeatable; makes coverage
+                        partial
+  --output OUTPUT
+[exit=0]
+
+$ python skills/xenium-data-intake/scripts/inventory.py compare --help
+usage: inventory.py compare [-h] --output OUTPUT baseline recipient
+
+positional arguments:
+  baseline
+  recipient
+
+options:
+  -h, --help       show this help message and exit
+  --output OUTPUT
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py --help
+usage: check_h5ad.py [-h] [--output OUTPUT] [--check-runtime]
+                     [--matrix-scan {metadata,full}]
+                     [--counts-layer COUNTS_LAYER]
+                     [--specimen-key SPECIMEN_KEY] [--id-column ID_COLUMN]
+                     [--mapping-column MAPPING_COLUMN]
+                     [--spatial-key SPATIAL_KEY] [--check-anndata]
+                     [input]
+
+Read-only H5AD checks. Dependencies: h5py, numpy; optional anndata reader
+check.
+
+positional arguments:
+  input
+
+options:
+  -h, --help            show this help message and exit
+  --output OUTPUT
+  --check-runtime
+  --matrix-scan {metadata,full}
+  --counts-layer COUNTS_LAYER
+                        Explicitly identify a purported raw-count layer
+  --specimen-key SPECIMEN_KEY
+  --id-column ID_COLUMN
+  --mapping-column MAPPING_COLUMN
+  --spatial-key SPATIAL_KEY
+  --check-anndata       Read-only AnnData compatibility check; can load
+                        layers/graphs into RAM
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py --check-runtime
+{
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "h5py": "3.16.0",
+    "anndata": null,
+    "squidpy": null
+  },
+  "imports": {
+    "numpy": {
+      "success": true
+    },
+    "h5py": {
+      "success": true
+    }
+  }
+}
+[exit=0]
+
+$ python skills/xenium-data-intake/scripts/inventory.py scan deliveries/explicit --scope-key explicit --output outputs/explicit.inventory.json
+{"status": "complete", "output": "<workspace>/trial-scope/outputs/explicit.inventory.json"}
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/explicit/expression.h5ad --output outputs/explicit.metadata.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-data-intake/scripts/inventory.py scan deliveries/unclear --scope-key unclear --output outputs/unclear.inventory.json
+{"status": "complete", "output": "<workspace>/trial-scope/outputs/unclear.inventory.json"}
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/unclear/expression.h5ad --output outputs/unclear.metadata.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-data-intake/scripts/inventory.py scan deliveries/additional --scope-key additional --output outputs/additional.inventory.json
+{"status": "complete", "output": "<workspace>/trial-scope/outputs/additional.inventory.json"}
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/additional/expression.h5ad --output outputs/additional.metadata.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-data-intake/scripts/inventory.py scan deliveries/empty-candidate --scope-key empty-candidate --output outputs/empty-candidate.inventory.json
+{"status": "complete", "output": "<workspace>/trial-scope/outputs/empty-candidate.inventory.json"}
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/empty-candidate/expression.h5ad --output outputs/empty-candidate.metadata.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/explicit/expression.h5ad --matrix-scan full --specimen-key specimen --id-column _index --mapping-column core --mapping-column group --output outputs/explicit.full.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/unclear/expression.h5ad --matrix-scan full --specimen-key specimen --id-column _index --mapping-column core --mapping-column group --output outputs/unclear.full.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/additional/expression.h5ad --matrix-scan full --specimen-key specimen --id-column _index --mapping-column core --mapping-column group --output outputs/additional.full.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python skills/xenium-analysis-input-check/scripts/check_h5ad.py deliveries/empty-candidate/expression.h5ad --matrix-scan full --specimen-key specimen --id-column _index --mapping-column core --mapping-column group --output outputs/empty-candidate.full.json
+Inspection saved; interpret evidence and incomplete checks before reporting.
+[exit=0]
+
+$ python outputs/targeted_checks.py
+{
+  "explicit": {
+    "file": "deliveries/explicit/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "unclear": {
+    "file": "deliveries/unclear/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "additional": {
+    "file": "deliveries/additional/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "empty-candidate": {
+    "file": "deliveries/empty-candidate/expression.h5ad",
+    "root_objects": [
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": false,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {},
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  }
+}
+[exit=0]
+
+$ cat delivery-agreements.md deliveries/explicit/README.md deliveries/unclear/README.md deliveries/additional/README.md deliveries/empty-candidate/README.md
+# Receiving agreements
+
+- explicit: the entire agreement is one curated expression.h5ad plus README.md, containing S1 and S2. Native images and native output files were not requested.
+- unclear: we received expression.h5ad and README.md, but no one has confirmed the intended delivery scope or supplied a source manifest. The README describes how to interpret objects, not a completeness agreement.
+- additional: the agreement requires expression.h5ad containing specimens S1, S2 and S3, README.md, and cell_feature_matrix/matrix.mtx.gz with its barcodes.tsv.gz and features.tsv.gz. The H5AD is useful in addition to the required MEX, not a contractual substitute. The original source is unavailable for this check.
+- empty-candidate: the agreement allows any readable expression-matrix representation with feature/cell correspondence plus README.md; a file named expression.h5ad was supplied as the candidate. We have no source manifest.
+The H5AD candidate uses specimen plus cell barcode as its cell key; core marks the local coordinate frame. Coordinate units, when present, are core-local micrometers. X, when present, is documented as log1p-normalized expression and a scaled layer as centered standardized values. No biological-replicate relationship is specified. Native assay validation is outside this request.
+The H5AD candidate uses specimen plus cell barcode as its cell key; core marks the local coordinate frame. Coordinate units, when present, are core-local micrometers. X, when present, is documented as log1p-normalized expression and a scaled layer as centered standardized values. No biological-replicate relationship is specified. Native assay validation is outside this request.
+The H5AD candidate uses specimen plus cell barcode as its cell key; core marks the local coordinate frame. Coordinate units, when present, are core-local micrometers. X, when present, is documented as log1p-normalized expression and a scaled layer as centered standardized values. No biological-replicate relationship is specified. Native assay validation is outside this request.
+The H5AD candidate uses specimen plus cell barcode as its cell key; core marks the local coordinate frame. Coordinate units, when present, are core-local micrometers. X, when present, is documented as log1p-normalized expression and a scaled layer as centered standardized values. No biological-replicate relationship is specified. Native assay validation is outside this request.
+[exit=0]

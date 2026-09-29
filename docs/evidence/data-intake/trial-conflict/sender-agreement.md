@@ -1,0 +1,1 @@
+The sender delivery email promises expression.h5ad, README.md, and all three native MEX files under cell_feature_matrix/: matrix.mtx.gz, barcodes.tsv.gz, features.tsv.gz. No later agreement revision is available.

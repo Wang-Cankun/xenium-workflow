@@ -1,0 +1,3 @@
++outputs/03_full_scan.sh:4> cd <workspace>/trial-analysis
++outputs/03_full_scan.sh:5> python skills/xenium-analysis-input-check/scripts/check_h5ad.py package/expression.h5ad --matrix-scan full --specimen-key core --id-column _index --mapping-column group --output outputs/expression-full.json
+Inspection saved; interpret evidence and incomplete checks before reporting.

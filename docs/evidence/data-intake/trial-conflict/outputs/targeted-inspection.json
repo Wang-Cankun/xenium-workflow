@@ -1,0 +1,146 @@
+{
+  "input": "received/expression.h5ad",
+  "mode": "h5py read-only; every dataset read in full",
+  "root_attribute_names": [],
+  "obs_columns": [
+    "_index",
+    "core",
+    "group",
+    "specimen"
+  ],
+  "feature_labels": [
+    "G1",
+    "G2"
+  ],
+  "rows": [
+    {
+      "row": 0,
+      "specimen": "S1",
+      "barcode": "c1",
+      "core": "A",
+      "group": "control",
+      "spatial": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 1,
+      "specimen": "S1",
+      "barcode": "c2",
+      "core": "A",
+      "group": "control",
+      "spatial": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "row": 2,
+      "specimen": "S2",
+      "barcode": "c1",
+      "core": "B",
+      "group": "case",
+      "spatial": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 3,
+      "specimen": "S2",
+      "barcode": "c2",
+      "core": "B",
+      "group": "case",
+      "spatial": [
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "specimen_barcode_duplicate_rows": 0,
+  "matrices": {
+    "X": [
+      [
+        0.1,
+        0.2
+      ],
+      [
+        0.5,
+        0.0
+      ],
+      [
+        0.3,
+        0.9
+      ],
+      [
+        0.8,
+        0.4
+      ]
+    ],
+    "layers/scaled": [
+      [
+        -1.0,
+        0.2
+      ],
+      [
+        1.0,
+        -0.2
+      ],
+      [
+        -0.4,
+        1.5
+      ],
+      [
+        0.4,
+        -1.5
+      ]
+    ]
+  },
+  "coordinate_frames": [
+    {
+      "specimen": "S1",
+      "core": "A",
+      "cells": 2,
+      "nonfinite": 0,
+      "duplicate_coordinate_rows": 0,
+      "axis_min": [
+        0.0,
+        0.0
+      ],
+      "axis_max": [
+        1.0,
+        2.0
+      ],
+      "collapsed_axes": [
+        false,
+        false
+      ]
+    },
+    {
+      "specimen": "S2",
+      "core": "B",
+      "cells": 2,
+      "nonfinite": 0,
+      "duplicate_coordinate_rows": 0,
+      "axis_min": [
+        0.0,
+        0.0
+      ],
+      "axis_max": [
+        1.0,
+        2.0
+      ],
+      "collapsed_axes": [
+        false,
+        false
+      ]
+    }
+  ],
+  "raw_group_present": false,
+  "layer_names": [
+    "scaled"
+  ],
+  "biological_replicate_field_present": false,
+  "cell_type_field_present": false
+}

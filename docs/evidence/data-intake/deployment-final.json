@@ -1,0 +1,42 @@
+{
+  "xenium-data-intake": {
+    "name": "xenium-data-intake",
+    "inLibrary": true,
+    "sites": [
+      {
+        "name": "xenium-data-intake",
+        "surface": "<home>/.codex/skills",
+        "path": "<home>/.codex/skills/xenium-data-intake",
+        "kind": "linked",
+        "target": "<home>/Documents/GitHub/skillshelf-library/xenium-data-intake",
+        "inLibrary": true,
+        "drift": false
+      }
+    ]
+  },
+  "xenium-analysis-input-check": {
+    "name": "xenium-analysis-input-check",
+    "inLibrary": true,
+    "sites": [
+      {
+        "name": "xenium-analysis-input-check",
+        "surface": "<home>/.codex/skills",
+        "path": "<home>/.codex/skills/xenium-analysis-input-check",
+        "kind": "linked",
+        "target": "<home>/Documents/GitHub/skillshelf-library/xenium-analysis-input-check",
+        "inLibrary": true,
+        "drift": false
+      }
+    ]
+  },
+  "xenium-input-check": {
+    "name": "xenium-input-check",
+    "inLibrary": true,
+    "sites": []
+  },
+  "retirement": {
+    "retired_link_resolves": true,
+    "old_codex_entry_absent": true,
+    "compatibility_source_retained": true
+  }
+}

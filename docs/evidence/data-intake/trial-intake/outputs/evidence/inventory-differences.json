@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "kind": "xenium-inventory-comparison",
+  "status": "complete",
+  "scopes_comparable": true,
+  "baseline": {
+    "source": {
+      "root": "<workspace>/intake-source-fixture",
+      "observed_start": "2026-09-18T23:42:12.264978+00:00",
+      "observed_end": "2026-09-18T23:42:12.293874+00:00"
+    },
+    "scope": {
+      "key": "two-region-delivery",
+      "exclusions": []
+    },
+    "enumeration": "complete",
+    "summary": {
+      "entries": 15,
+      "files": 9,
+      "directories": 6,
+      "symlinks": 0,
+      "other": 0,
+      "file_bytes": 781
+    },
+    "skips": [],
+    "errors": []
+  },
+  "recipient": {
+    "source": {
+      "root": "<workspace>/trial-intake/received",
+      "observed_start": "2026-09-18T23:45:27.601654+00:00",
+      "observed_end": "2026-09-18T23:45:27.649405+00:00"
+    },
+    "scope": {
+      "key": "two-region-delivery",
+      "exclusions": []
+    },
+    "enumeration": "complete",
+    "summary": {
+      "entries": 15,
+      "files": 9,
+      "directories": 6,
+      "symlinks": 0,
+      "other": 0,
+      "file_bytes": 781
+    },
+    "skips": [],
+    "errors": []
+  },
+  "missing_confirmed": [
+    "regionB/cell_feature_matrix/matrix.mtx.gz"
+  ],
+  "extra_confirmed": [
+    "regionB/download-note.txt"
+  ],
+  "baseline_only_unobserved": [],
+  "recipient_only_unobserved": [],
+  "type_differences": [],
+  "size_differences": [],
+  "same_file_metadata": [
+    "regionA/README.md",
+    "regionA/aux_outputs/morphology_focus_qc_masks/morphology.ome.tif",
+    "regionA/cell_feature_matrix/barcodes.tsv.gz",
+    "regionA/cell_feature_matrix/features.tsv.gz",
+    "regionA/experiment.xenium",
+    "regionB/README.md",
+    "regionB/cell_feature_matrix/barcodes.tsv.gz",
+    "regionB/cell_feature_matrix/features.tsv.gz"
+  ],
+  "same_nonfile_type": [
+    "regionA",
+    "regionA/aux_outputs",
+    "regionA/aux_outputs/morphology_focus_qc_masks",
+    "regionA/cell_feature_matrix",
+    "regionB",
+    "regionB/cell_feature_matrix"
+  ],
+  "errors": [],
+  "limitations": [
+    "Metadata only: content identity and local materialization are not verified.",
+    "Not an atomic snapshot; concurrent changes may go undetected.",
+    "Symlinks are listed but never followed; archives are single files.",
+    "Missing/extra refer only to these inventories and compatible selected scopes, not the entire delivery agreement.",
+    "Extra means absent from this baseline, not unauthorized or unwanted."
+  ],
+  "input_manifests": {
+    "baseline": "<workspace>/trial-intake/shared-folder-inventory.json",
+    "recipient": "<workspace>/trial-intake/outputs/evidence/received-inventory.json"
+  }
+}

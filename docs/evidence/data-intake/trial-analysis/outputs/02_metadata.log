@@ -1,0 +1,3 @@
++outputs/02_metadata.sh:4> cd <workspace>/trial-analysis
++outputs/02_metadata.sh:5> python skills/xenium-analysis-input-check/scripts/check_h5ad.py package/expression.h5ad --specimen-key core --output outputs/expression-metadata.json
+Inspection saved; interpret evidence and incomplete checks before reporting.

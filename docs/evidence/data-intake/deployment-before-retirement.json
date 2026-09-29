@@ -1,0 +1,42 @@
+{
+  "xenium-data-intake": {
+    "canonical": "<home>/Documents/GitHub/xenium-workflow/skills/xenium-data-intake",
+    "skill_readable": true,
+    "entry_checks": [
+      {
+        "args": [
+          "scan",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "args": [
+          "compare",
+          "--help"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  "xenium-analysis-input-check": {
+    "canonical": "<home>/Documents/GitHub/xenium-workflow/skills/xenium-analysis-input-check",
+    "skill_readable": true,
+    "entry_checks": [
+      {
+        "args": [
+          "--help"
+        ],
+        "exit_code": 0
+      }
+    ]
+  },
+  "xenium-input-check": {
+    "canonical": "<home>/Documents/GitHub/xenium-workflow/skills/xenium-input-check",
+    "skill_readable": true
+  },
+  "xenium-workflow": {
+    "canonical": "<home>/Documents/GitHub/xenium-workflow/skills/xenium-workflow",
+    "skill_readable": true
+  }
+}

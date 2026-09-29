@@ -1,0 +1,82 @@
++outputs/01_inventory_runtime.sh:4> cd <workspace>/trial-analysis
++outputs/01_inventory_runtime.sh:5> pwd -P
+<workspace>/trial-analysis
++outputs/01_inventory_runtime.sh:6> /usr/bin/stat -f '%N | %z bytes' package/README.md package/annotations.csv package/coordinates.csv package/expression.h5ad package/sender-checksums.txt
+package/README.md | 1194 bytes
+package/annotations.csv | 47 bytes
+package/coordinates.csv | 53 bytes
+package/expression.h5ad | 13504 bytes
+package/sender-checksums.txt | 82 bytes
++outputs/01_inventory_runtime.sh:7> cat skills/xenium-biohpc-setup/profile.md
+# Local fixture execution profile
+
+Workspace: this isolated trial directory. Execution is local; no server is involved.
+Python: python with NumPy and h5py. AnnData reader validation is optional and is not requested. Save findings in outputs/. Research data and external accounts are outside this task.
++outputs/01_inventory_runtime.sh:8> cat package/README.md
+# Curated Xenium delivery
+
+This delivery consists of a processed expression object, annotation and coordinate exports, this README and the sender checksum list. Native images, native count matrices and transcript outputs are outside this curated delivery.
+
+`expression.h5ad`: X is log1p-normalized expression; layers/scaled contains centered standardized values. Raw counts were not exported. The obs index is the supplied cell barcode, unique only within each core. `core` defines the coordinate frame. `obsm/spatial` gives cell-centroid x/y in core-local micrometers and is aligned to obs rows. The object contains cores A and B; their local coordinate ranges may overlap. Group labels are descriptive; animal/tumor identities and biological independence are not provided.
+
+`annotations.csv` and `coordinates.csv` are exports keyed by (core, cell_id); their row ordering is arbitrary. Use the supplied keys when checking correspondence. The coordinate export is intended to cover the object's cells. Annotations were supplied by the collaborator and have not been revalidated. The sender checksum list was supplied with the delivery; its relationship to this local copy has not been checked.
++outputs/01_inventory_runtime.sh:9> cat package/sender-checksums.txt
+0000000000000000000000000000000000000000000000000000000000000000  expression.h5ad
++outputs/01_inventory_runtime.sh:10> head -n 8 package/annotations.csv
+core,cell_id,label
+B,c2,T
+A,c2,B
+B,c1,B
+A,c1,T
++outputs/01_inventory_runtime.sh:11> head -n 8 package/coordinates.csv
+core,cell_id,x,y
+B,c9,1,2
+A,c2,1,2
+B,c1,0,0
+A,c1,0,0
++outputs/01_inventory_runtime.sh:12> python skills/xenium-analysis-input-check/scripts/check_h5ad.py --help
+usage: check_h5ad.py [-h] [--output OUTPUT] [--check-runtime]
+                     [--matrix-scan {metadata,full}]
+                     [--counts-layer COUNTS_LAYER]
+                     [--specimen-key SPECIMEN_KEY] [--id-column ID_COLUMN]
+                     [--mapping-column MAPPING_COLUMN]
+                     [--spatial-key SPATIAL_KEY] [--check-anndata]
+                     [input]
+
+Read-only H5AD checks. Dependencies: h5py, numpy; optional anndata reader
+check.
+
+positional arguments:
+  input
+
+options:
+  -h, --help            show this help message and exit
+  --output OUTPUT
+  --check-runtime
+  --matrix-scan {metadata,full}
+  --counts-layer COUNTS_LAYER
+                        Explicitly identify a purported raw-count layer
+  --specimen-key SPECIMEN_KEY
+  --id-column ID_COLUMN
+  --mapping-column MAPPING_COLUMN
+  --spatial-key SPATIAL_KEY
+  --check-anndata       Read-only AnnData compatibility check; can load
+                        layers/graphs into RAM
++outputs/01_inventory_runtime.sh:13> python skills/xenium-analysis-input-check/scripts/check_h5ad.py --check-runtime
+{
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "h5py": "3.16.0",
+    "anndata": null,
+    "squidpy": null
+  },
+  "imports": {
+    "numpy": {
+      "success": true
+    },
+    "h5py": {
+      "success": true
+    }
+  }
+}

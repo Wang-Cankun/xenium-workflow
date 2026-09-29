@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "kind": "xenium-file-inventory",
+  "status": "complete",
+  "source": {
+    "root": "<workspace>/trial-intake/received",
+    "observed_start": "2026-09-18T23:45:27.601654+00:00",
+    "observed_end": "2026-09-18T23:45:27.649405+00:00"
+  },
+  "scope": {
+    "key": "two-region-delivery",
+    "exclusions": []
+  },
+  "enumeration": "complete",
+  "entries": [
+    {
+      "path": "regionA",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionA/README.md",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 168
+    },
+    {
+      "path": "regionA/aux_outputs",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionA/aux_outputs/morphology_focus_qc_masks",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionA/aux_outputs/morphology_focus_qc_masks/morphology.ome.tif",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 44
+    },
+    {
+      "path": "regionA/cell_feature_matrix",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionA/cell_feature_matrix/barcodes.tsv.gz",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 45
+    },
+    {
+      "path": "regionA/cell_feature_matrix/features.tsv.gz",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 66
+    },
+    {
+      "path": "regionA/experiment.xenium",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 86
+    },
+    {
+      "path": "regionB",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionB/README.md",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 168
+    },
+    {
+      "path": "regionB/cell_feature_matrix",
+      "type": "directory",
+      "availability": "unknown"
+    },
+    {
+      "path": "regionB/cell_feature_matrix/barcodes.tsv.gz",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 45
+    },
+    {
+      "path": "regionB/cell_feature_matrix/features.tsv.gz",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 66
+    },
+    {
+      "path": "regionB/download-note.txt",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 93
+    }
+  ],
+  "errors": [],
+  "skips": [],
+  "limitations": [
+    "Metadata only: content identity and local materialization are not verified.",
+    "Not an atomic snapshot; concurrent changes may go undetected.",
+    "Symlinks are listed but never followed; archives are single files."
+  ],
+  "summary": {
+    "entries": 15,
+    "files": 9,
+    "directories": 6,
+    "symlinks": 0,
+    "other": 0,
+    "file_bytes": 781
+  }
+}

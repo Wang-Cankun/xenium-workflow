@@ -1,0 +1,16 @@
+{
+  "representation": "native_summary_export",
+  "run_count": 1,
+  "slide_count": 2,
+  "patient_count": null,
+  "panel": "Human 5K",
+  "processing": "cells.csv gene transcript counts; no recipient filtering",
+  "native_median_population": "cells with nonzero gene transcripts",
+  "regions": [
+    {"id":"A","folder":"North","cells":100,"gene_count_quantiles":{"min":0,"p25":0,"p50":20,"p75":50,"max":100},"native_median_transcripts":35,"q20":0.82,"assignment":0.75,"matrix_available":true,"alerts":[]},
+    {"id":"B","folder":"North","cells":200,"gene_count_quantiles":{"min":1,"p25":40,"p50":80,"p75":130,"max":500},"native_median_transcripts":80,"q20":0.90,"assignment":0.88,"matrix_available":true,"alerts":[]},
+    {"id":"C","folder":"South","cells":50,"gene_count_quantiles":{"min":0,"p25":0,"p50":0,"p75":10,"max":90},"native_median_transcripts":10,"q20":null,"assignment":null,"matrix_available":false,"alerts":[]}
+  ],
+  "source_comparison": "Region C matrix absent in the inspected shared folder and recipient copy. Original drive uninspected.",
+  "sample_mapping": "Folder names are administrative. No region-to-biopsy or patient mapping supplied."
+}

@@ -1,0 +1,29 @@
+{
+  "baseline_summary": {
+    "entries": 15,
+    "files": 9,
+    "directories": 6,
+    "symlinks": 0,
+    "other": 0,
+    "file_bytes": 781
+  },
+  "recipient_summary": {
+    "entries": 15,
+    "files": 9,
+    "directories": 6,
+    "symlinks": 0,
+    "other": 0,
+    "file_bytes": 781
+  },
+  "comparison": {
+    "status": "complete",
+    "missing_confirmed": [
+      "regionB/cell_feature_matrix/matrix.mtx.gz"
+    ],
+    "extra_confirmed": [
+      "regionB/download-note.txt"
+    ],
+    "type_differences": [],
+    "size_differences": []
+  }
+}

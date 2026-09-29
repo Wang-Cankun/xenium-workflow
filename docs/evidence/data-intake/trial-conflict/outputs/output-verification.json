@@ -1,0 +1,14 @@
+{
+  "report_links": 9,
+  "missing_links": [],
+  "links_outside_trial": [],
+  "recorded_commands": 5,
+  "command_returncodes": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "input_checker_errors": []
+}

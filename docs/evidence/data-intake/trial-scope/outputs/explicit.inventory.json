@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "xenium-file-inventory",
+  "status": "complete",
+  "source": {
+    "root": "<workspace>/trial-scope/deliveries/explicit",
+    "observed_start": "2026-09-18T23:50:46.242006+00:00",
+    "observed_end": "2026-09-18T23:50:46.246696+00:00"
+  },
+  "scope": {
+    "key": "explicit",
+    "exclusions": []
+  },
+  "enumeration": "complete",
+  "entries": [
+    {
+      "path": "README.md",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 381
+    },
+    {
+      "path": "expression.h5ad",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 19712
+    }
+  ],
+  "errors": [],
+  "skips": [],
+  "limitations": [
+    "Metadata only: content identity and local materialization are not verified.",
+    "Not an atomic snapshot; concurrent changes may go undetected.",
+    "Symlinks are listed but never followed; archives are single files."
+  ],
+  "summary": {
+    "entries": 2,
+    "files": 2,
+    "directories": 0,
+    "symlinks": 0,
+    "other": 0,
+    "file_bytes": 20093
+  }
+}

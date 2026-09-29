@@ -1,0 +1,1 @@
+The H5AD candidate uses specimen plus cell barcode as its cell key; core marks the local coordinate frame. Coordinate units, when present, are core-local micrometers. X, when present, is documented as log1p-normalized expression and a scaled layer as centered standardized values. No biological-replicate relationship is specified. Native assay validation is outside this request.

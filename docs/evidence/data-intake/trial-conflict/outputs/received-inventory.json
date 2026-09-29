@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "xenium-file-inventory",
+  "status": "complete",
+  "source": {
+    "root": "<workspace>/trial-conflict/received",
+    "observed_start": "2026-09-18T23:55:22.364160+00:00",
+    "observed_end": "2026-09-18T23:55:22.364927+00:00"
+  },
+  "scope": {
+    "key": "trial-conflict-received-delivery",
+    "exclusions": []
+  },
+  "enumeration": "complete",
+  "entries": [
+    {
+      "path": "README.md",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 474
+    },
+    {
+      "path": "expression.h5ad",
+      "type": "file",
+      "availability": "unknown",
+      "size_bytes": 19712
+    }
+  ],
+  "errors": [],
+  "skips": [],
+  "limitations": [
+    "Metadata only: content identity and local materialization are not verified.",
+    "Not an atomic snapshot; concurrent changes may go undetected.",
+    "Symlinks are listed but never followed; archives are single files."
+  ],
+  "summary": {
+    "entries": 2,
+    "files": 2,
+    "directories": 0,
+    "symlinks": 0,
+    "other": 0,
+    "file_bytes": 20186
+  }
+}

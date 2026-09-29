@@ -1,0 +1,261 @@
+{
+  "copied_file_count": 78,
+  "all_copied_files_byte_equal": true,
+  "reports_preserved_verbatim": [
+    "trial-intake/outputs/intake-report.md",
+    "trial-analysis/outputs/report.md",
+    "trial-scope/outputs/report.md",
+    "trial-conflict/outputs/report.md"
+  ],
+  "relative_report_links": [
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "../delivery-notes.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "../shared-folder-inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "evidence/received-inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "evidence/inventory-differences.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "../sender-checksums.txt",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "sender-followup-draft.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "evidence/scope-evidence.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "evidence/command-results.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "evidence/run-summary.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-intake/outputs/intake-report.md",
+      "link": "reproduce.py",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "01_inventory_runtime.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "expression-metadata.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "expression-full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "04_joins.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "01_inventory_runtime.sh",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "01_inventory_runtime.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "02_metadata.sh",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "02_metadata.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "expression-metadata.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "03_full_scan.sh",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "03_full_scan.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "expression-full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "04_joins.sh",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "check_package_joins.py",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-analysis/outputs/report.md",
+      "link": "04_joins.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "../delivery-agreements.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "explicit.inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "explicit.full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "unclear.inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "unclear.full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "additional.inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "additional.full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "empty-candidate.inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "empty-candidate.full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "targeted-checks.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "targeted_checks.py",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-scope/outputs/report.md",
+      "link": "commands.log",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "../sender-agreement.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "../source-observations.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "received-inventory.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "../received/README.md",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "h5ad-metadata.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "h5ad-full.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "targeted-inspection.json",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "command-results.jsonl",
+      "resolves_inside_archive": true
+    },
+    {
+      "report": "trial-conflict/outputs/report.md",
+      "link": "inspect_targeted.py",
+      "resolves_inside_archive": true
+    }
+  ],
+  "input_snapshot_match_counts": {
+    "trial-intake": "9/9",
+    "trial-analysis": "5/5",
+    "trial-scope": "8/8",
+    "trial-conflict": "2/2"
+  },
+  "new_hashes_computed": false,
+  "archived_scripts_executed": false,
+  "portable_replay_claimed": false,
+  "excluded": [
+    "skills",
+    "profile files",
+    "caches",
+    "coordinator byte snapshots",
+    "source-root fixtures",
+    "later coordinator execution-summary and deployment/test additions",
+    "root README.md (coordinator-owned implementation/deployment index)"
+  ],
+  "coverage": "Trial artifacts and archive audit files as packaged; later coordinator additions are outside this audit and manifest."
+}

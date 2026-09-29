@@ -1,0 +1,284 @@
++outputs/04_joins.sh:4> cd <workspace>/trial-analysis
++outputs/04_joins.sh:5> python outputs/check_package_joins.py
+{
+  "scope": "All object cells, all matrix entries, and every CSV row; no sampling.",
+  "h5_root_attributes": {},
+  "h5_root_keys": [
+    "X",
+    "layers",
+    "obs",
+    "obsm",
+    "var"
+  ],
+  "object_rows": [
+    {
+      "core": "A",
+      "cell_id": "c1",
+      "group": "control",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "core": "A",
+      "cell_id": "c2",
+      "group": "control",
+      "x": 1.0,
+      "y": 2.0
+    },
+    {
+      "core": "B",
+      "cell_id": "c1",
+      "group": "case",
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "core": "B",
+      "cell_id": "c2",
+      "group": "case",
+      "x": 1.0,
+      "y": 2.0
+    }
+  ],
+  "object_composite_key_duplicate_rows": 0,
+  "object_composite_duplicate_keys": [],
+  "features": [
+    "G1",
+    "G2"
+  ],
+  "matrix_values": {
+    "X": [
+      [
+        0.1,
+        0.2
+      ],
+      [
+        0.5,
+        0.0
+      ],
+      [
+        0.3,
+        0.9
+      ],
+      [
+        0.8,
+        0.4
+      ]
+    ],
+    "layers/scaled": [
+      [
+        -1.0,
+        0.2
+      ],
+      [
+        1.0,
+        -0.2
+      ],
+      [
+        -0.4,
+        1.5
+      ],
+      [
+        0.4,
+        -1.5
+      ]
+    ]
+  },
+  "empty_feature_columns": {
+    "X": 0,
+    "layers/scaled": 0
+  },
+  "core_to_groups": {
+    "A": [
+      "control"
+    ],
+    "B": [
+      "case"
+    ]
+  },
+  "annotations": {
+    "columns": [
+      "core",
+      "cell_id",
+      "label"
+    ],
+    "rows": 4,
+    "all_rows": [
+      {
+        "core": "B",
+        "cell_id": "c2",
+        "label": "T"
+      },
+      {
+        "core": "A",
+        "cell_id": "c2",
+        "label": "B"
+      },
+      {
+        "core": "B",
+        "cell_id": "c1",
+        "label": "B"
+      },
+      {
+        "core": "A",
+        "cell_id": "c1",
+        "label": "T"
+      }
+    ],
+    "malformed_rows": 0,
+    "missing_key_rows": 0,
+    "duplicate_key_rows": 0,
+    "duplicate_keys": [],
+    "matched_object_keys": [
+      {
+        "core": "A",
+        "cell_id": "c1"
+      },
+      {
+        "core": "A",
+        "cell_id": "c2"
+      },
+      {
+        "core": "B",
+        "cell_id": "c1"
+      },
+      {
+        "core": "B",
+        "cell_id": "c2"
+      }
+    ],
+    "missing_object_keys": [],
+    "extra_csv_keys": [],
+    "same_key_order_as_object": false,
+    "missing_label_rows": 0,
+    "label_counts": {
+      "T": 2,
+      "B": 2
+    },
+    "aligned_object_labels": [
+      "T",
+      "B",
+      "B",
+      "T"
+    ]
+  },
+  "coordinates": {
+    "columns": [
+      "core",
+      "cell_id",
+      "x",
+      "y"
+    ],
+    "rows": 4,
+    "all_rows": [
+      {
+        "core": "B",
+        "cell_id": "c9",
+        "x": "1",
+        "y": "2"
+      },
+      {
+        "core": "A",
+        "cell_id": "c2",
+        "x": "1",
+        "y": "2"
+      },
+      {
+        "core": "B",
+        "cell_id": "c1",
+        "x": "0",
+        "y": "0"
+      },
+      {
+        "core": "A",
+        "cell_id": "c1",
+        "x": "0",
+        "y": "0"
+      }
+    ],
+    "malformed_rows": 0,
+    "missing_key_rows": 0,
+    "duplicate_key_rows": 0,
+    "duplicate_keys": [],
+    "matched_object_keys": [
+      {
+        "core": "A",
+        "cell_id": "c1"
+      },
+      {
+        "core": "A",
+        "cell_id": "c2"
+      },
+      {
+        "core": "B",
+        "cell_id": "c1"
+      }
+    ],
+    "missing_object_keys": [
+      {
+        "core": "B",
+        "cell_id": "c2"
+      }
+    ],
+    "extra_csv_keys": [
+      {
+        "core": "B",
+        "cell_id": "c9"
+      }
+    ],
+    "same_key_order_as_object": false,
+    "nonfinite_values": 0,
+    "all_row_axis_min": [
+      0.0,
+      0.0
+    ],
+    "all_row_axis_max": [
+      1.0,
+      2.0
+    ],
+    "matched_coordinate_comparisons": [
+      {
+        "core": "A",
+        "cell_id": "c1",
+        "exact_match": true,
+        "max_abs_difference": 0.0
+      },
+      {
+        "core": "A",
+        "cell_id": "c2",
+        "exact_match": true,
+        "max_abs_difference": 0.0
+      },
+      {
+        "core": "B",
+        "cell_id": "c1",
+        "exact_match": true,
+        "max_abs_difference": 0.0
+      }
+    ],
+    "per_core_coverage": {
+      "A": {
+        "object_cells": 2,
+        "matched_keys": 2,
+        "missing_object_keys": [],
+        "extra_csv_keys": []
+      },
+      "B": {
+        "object_cells": 2,
+        "matched_keys": 1,
+        "missing_object_keys": [
+          {
+            "core": "B",
+            "cell_id": "c2"
+          }
+        ],
+        "extra_csv_keys": [
+          {
+            "core": "B",
+            "cell_id": "c9"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,553 @@
+{
+  "explicit": {
+    "file": "deliveries/explicit/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "unclear": {
+    "file": "deliveries/unclear/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "additional": {
+    "file": "deliveries/additional/expression.h5ad",
+    "root_objects": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": true,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {
+      "X": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.5,
+            0.0
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.8,
+            0.4
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      },
+      "layers/scaled": {
+        "shape": [
+          4,
+          2
+        ],
+        "all_values": [
+          [
+            -1.0,
+            0.2
+          ],
+          [
+            1.0,
+            -0.2
+          ],
+          [
+            -0.4,
+            1.5
+          ],
+          [
+            0.4,
+            -1.5
+          ]
+        ],
+        "all_zero": false,
+        "empty_columns": 0,
+        "axis_correspondence": true
+      }
+    },
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  },
+  "empty-candidate": {
+    "file": "deliveries/empty-candidate/expression.h5ad",
+    "root_objects": [
+      "obs",
+      "obsm",
+      "var"
+    ],
+    "expression_matrix_present": false,
+    "composite_key": [
+      "specimen",
+      "_index"
+    ],
+    "composite_key_duplicate_rows": 0,
+    "composite_keys": [
+      [
+        "S1",
+        "c1"
+      ],
+      [
+        "S1",
+        "c2"
+      ],
+      [
+        "S2",
+        "c1"
+      ],
+      [
+        "S2",
+        "c2"
+      ]
+    ],
+    "missing_or_blank_key_components": 0,
+    "specimen_counts": {
+      "S1": 2,
+      "S2": 2
+    },
+    "specimen_core_group_rows": [
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S1",
+        "A",
+        "control"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ],
+      [
+        "S2",
+        "B",
+        "case"
+      ]
+    ],
+    "feature_labels": [
+      "G1",
+      "G2"
+    ],
+    "matrices": {},
+    "coordinate_frames": {
+      "S1/A": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      },
+      "S2/B": {
+        "cells": 2,
+        "nonfinite_values": 0,
+        "axis_min": [
+          0.0,
+          0.0
+        ],
+        "axis_max": [
+          1.0,
+          2.0
+        ],
+        "collapsed_axes": [],
+        "duplicate_coordinate_rows": 0
+      }
+    },
+    "join_evidence": "Expression, obs, and obsm are internal to one supplied H5 object and have matching cell axes; there are no external per-cell tables to join."
+  }
+}

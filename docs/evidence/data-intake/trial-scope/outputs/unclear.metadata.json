@@ -1,0 +1,204 @@
+{
+  "runtime": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "h5py": "3.16.0",
+    "anndata": null,
+    "squidpy": null
+  },
+  "input": "deliveries/unclear/expression.h5ad",
+  "file_bytes": 19712,
+  "matrix_scope": "metadata only",
+  "errors": [],
+  "inventory": {
+    "X": {
+      "shape": [
+        4,
+        2
+      ],
+      "attrs": {}
+    },
+    "layers": {
+      "shape": null,
+      "attrs": {}
+    },
+    "layers/scaled": {
+      "shape": [
+        4,
+        2
+      ],
+      "attrs": {}
+    },
+    "obs": {
+      "shape": null,
+      "attrs": {
+        "_index": "_index"
+      }
+    },
+    "obs/_index": {
+      "shape": [
+        4
+      ],
+      "attrs": {}
+    },
+    "obs/core": {
+      "shape": [
+        4
+      ],
+      "attrs": {}
+    },
+    "obs/group": {
+      "shape": [
+        4
+      ],
+      "attrs": {}
+    },
+    "obs/specimen": {
+      "shape": [
+        4
+      ],
+      "attrs": {}
+    },
+    "obsm": {
+      "shape": null,
+      "attrs": {}
+    },
+    "obsm/spatial": {
+      "shape": [
+        4,
+        2
+      ],
+      "attrs": {}
+    },
+    "var": {
+      "shape": null,
+      "attrs": {
+        "_index": "_index"
+      }
+    },
+    "var/_index": {
+      "shape": [
+        2
+      ],
+      "attrs": {}
+    }
+  },
+  "obs": {
+    "_index": {
+      "length": 4,
+      "missing": 0,
+      "empty_strings": 0,
+      "unique": 2,
+      "counts": {
+        "c1": 2,
+        "c2": 2
+      }
+    },
+    "core": {
+      "length": 4,
+      "missing": 0,
+      "empty_strings": 0,
+      "unique": 2,
+      "counts": {
+        "A": 2,
+        "B": 2
+      }
+    },
+    "group": {
+      "length": 4,
+      "missing": 0,
+      "empty_strings": 0,
+      "unique": 2,
+      "counts": {
+        "control": 2,
+        "case": 2
+      }
+    },
+    "specimen": {
+      "length": 4,
+      "missing": 0,
+      "empty_strings": 0,
+      "unique": 2,
+      "counts": {
+        "S1": 2,
+        "S2": 2
+      }
+    }
+  },
+  "obs_index": {
+    "key": "_index",
+    "unique": false,
+    "length": 4
+  },
+  "var": {
+    "_index": {
+      "length": 2,
+      "missing": 0,
+      "empty_strings": 0,
+      "unique": 2,
+      "counts": {
+        "G1": 1,
+        "G2": 1
+      }
+    }
+  },
+  "var_index": {
+    "key": "_index",
+    "unique": true,
+    "length": 2
+  },
+  "alignment": {
+    "obs": true,
+    "var": true
+  },
+  "matrices": {
+    "X": {
+      "encoding": "array",
+      "shape": [
+        4,
+        2
+      ],
+      "matches_obs_var": true,
+      "purported_counts": false
+    },
+    "layers/scaled": {
+      "encoding": "array",
+      "shape": [
+        4,
+        2
+      ],
+      "matches_obs_var": true,
+      "purported_counts": false
+    }
+  },
+  "identity_checks": {},
+  "specimens": {
+    "key": null,
+    "present": false
+  },
+  "spatial": {
+    "key": "spatial",
+    "present": true,
+    "units": "not inferred",
+    "frame": "not inferred",
+    "shape": [
+      4,
+      2
+    ],
+    "matches_obs": true,
+    "nonfinite": 0,
+    "overall": {
+      "finite_rows": 4,
+      "axis_min": [
+        0.0,
+        0.0
+      ],
+      "axis_max": [
+        1.0,
+        2.0
+      ],
+      "duplicate_coordinate_rows": 2
+    }
+  },
+  "uns": {}
+}

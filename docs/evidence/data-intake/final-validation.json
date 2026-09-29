@@ -1,0 +1,41 @@
+{
+  "skill_frontmatter": [
+    "scientific-figures",
+    "xenium-analysis-input-check",
+    "xenium-biohpc-setup",
+    "xenium-composition",
+    "xenium-data-intake",
+    "xenium-input-check",
+    "xenium-quiche",
+    "xenium-workflow"
+  ],
+  "repository_relative_links": 138,
+  "historical_absolute_links": [],
+  "syntax": [
+    "skills/xenium-data-intake/scripts/inventory.py",
+    "skills/xenium-analysis-input-check/scripts/check_h5ad.py",
+    "tests/test_data_intake.py",
+    "tests/test_check_h5ad.py",
+    "tests/test_check_h5ad_cli.py"
+  ],
+  "git_diff_check": "passed",
+  "renamed_checker_and_biological_reference": "equal to pre-edit working-copy bytes",
+  "unrelated_checkpoint_preservation": [
+    {
+      "path": "docs/skill-trials.md",
+      "preserved": true
+    },
+    {
+      "path": "skills/scientific-figures/SKILL.md",
+      "preserved": true
+    },
+    {
+      "path": "skills/scientific-figures/references/report-layout.md",
+      "preserved": true
+    },
+    {
+      "path": "skills/scientific-figures/references/figure-review.md",
+      "preserved": true
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "kind": "synthetic-trial-evidence-archive",
+  "scope": [
+    "trial-intake",
+    "trial-analysis",
+    "trial-scope",
+    "trial-conflict"
+  ],
+  "omitted_from_file_listing": [
+    "manifest.json (this file)",
+    "README.md (coordinator-owned root index, replaced after trial packaging)"
+  ],
+  "checksums_computed": false,
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "size_bytes": 3146,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "coordinator/archive-audit-results.json",
+      "size_bytes": 7528,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "coordinator/criteria/README.md",
+      "size_bytes": 639,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "coordinator/criteria/analysis-trial-criteria.md",
+      "size_bytes": 531,
+      "role": "coordinator-criteria-not-supplied-to-candidate",
+      "copied_from": "analysis-trial-criteria.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "coordinator/criteria/conflict-trial-criteria.md",
+      "size_bytes": 367,
+      "role": "coordinator-criteria-not-supplied-to-candidate",
+      "source": "coordinator packaging instruction, recorded in archive"
+    },
+    {
+      "path": "coordinator/criteria/intake-trial-criteria.md",
+      "size_bytes": 632,
+      "role": "coordinator-criteria-not-supplied-to-candidate",
+      "copied_from": "intake-trial-criteria.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "coordinator/criteria/scope-trial-criteria.md",
+      "size_bytes": 695,
+      "role": "coordinator-criteria-not-supplied-to-candidate",
+      "copied_from": "scope-trial-criteria.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "coordinator/evaluation-notes.md",
+      "size_bytes": 894,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "coordinator/input-byte-comparison.json",
+      "size_bytes": 6923,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "trial-analysis/README.md",
+      "size_bytes": 1975,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "trial-analysis/outputs/01_inventory_runtime.log",
+      "size_bytes": 4151,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/01_inventory_runtime.log",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/01_inventory_runtime.sh",
+      "size_bytes": 534,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/01_inventory_runtime.sh",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/02_metadata.log",
+      "size_bytes": 382,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/02_metadata.log",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/02_metadata.sh",
+      "size_bytes": 277,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/02_metadata.sh",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/03_full_scan.log",
+      "size_bytes": 441,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/03_full_scan.log",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/03_full_scan.sh",
+      "size_bytes": 334,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/03_full_scan.sh",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/04_joins.log",
+      "size_bytes": 4793,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/04_joins.log",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/04_joins.sh",
+      "size_bytes": 165,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/04_joins.sh",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/check_package_joins.py",
+      "size_bytes": 4645,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/check_package_joins.py",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/expression-full.json",
+      "size_bytes": 3992,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/expression-full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/expression-metadata.json",
+      "size_bytes": 3559,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/expression-metadata.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/outputs/report.md",
+      "size_bytes": 6565,
+      "role": "candidate-output",
+      "copied_from": "trial-analysis/outputs/report.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/package/README.md",
+      "size_bytes": 1194,
+      "role": "synthetic-input",
+      "copied_from": "trial-analysis/package/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/package/annotations.csv",
+      "size_bytes": 47,
+      "role": "synthetic-input",
+      "copied_from": "trial-analysis/package/annotations.csv",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/package/coordinates.csv",
+      "size_bytes": 53,
+      "role": "synthetic-input",
+      "copied_from": "trial-analysis/package/coordinates.csv",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/package/expression.h5ad",
+      "size_bytes": 13504,
+      "role": "synthetic-input",
+      "copied_from": "trial-analysis/package/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-analysis/package/sender-checksums.txt",
+      "size_bytes": 82,
+      "role": "synthetic-input",
+      "copied_from": "trial-analysis/package/sender-checksums.txt",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/README.md",
+      "size_bytes": 1997,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "trial-conflict/outputs/command-results.jsonl",
+      "size_bytes": 4539,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/command-results.jsonl",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/h5ad-full.json",
+      "size_bytes": 4270,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/h5ad-full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/h5ad-metadata.json",
+      "size_bytes": 3164,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/h5ad-metadata.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/inspect_targeted.py",
+      "size_bytes": 1875,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/inspect_targeted.py",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/output-verification.json",
+      "size_bytes": 198,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/output-verification.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/received-inventory.json",
+      "size_bytes": 1093,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/received-inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/report.md",
+      "size_bytes": 8239,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/report.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/outputs/targeted-inspection.json",
+      "size_bytes": 2189,
+      "role": "candidate-output",
+      "copied_from": "trial-conflict/outputs/targeted-inspection.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/received/README.md",
+      "size_bytes": 474,
+      "role": "synthetic-input",
+      "copied_from": "trial-conflict/received/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/received/expression.h5ad",
+      "size_bytes": 19712,
+      "role": "synthetic-input",
+      "copied_from": "trial-conflict/received/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/request.md",
+      "size_bytes": 406,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-conflict/request.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/sender-agreement.md",
+      "size_bytes": 213,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-conflict/sender-agreement.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-conflict/source-observations.md",
+      "size_bytes": 241,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-conflict/source-observations.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/README.md",
+      "size_bytes": 1678,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "trial-intake/delivery-notes.md",
+      "size_bytes": 749,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-intake/delivery-notes.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/evidence/command-results.json",
+      "size_bytes": 1929,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/evidence/command-results.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/evidence/inventory-differences.json",
+      "size_bytes": 2761,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/evidence/inventory-differences.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/evidence/received-inventory.json",
+      "size_bytes": 2806,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/evidence/received-inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/evidence/run-summary.json",
+      "size_bytes": 544,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/evidence/run-summary.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/evidence/scope-evidence.json",
+      "size_bytes": 2686,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/evidence/scope-evidence.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/intake-report.md",
+      "size_bytes": 4642,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/intake-report.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/reproduce.py",
+      "size_bytes": 2761,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/reproduce.py",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/outputs/sender-followup-draft.md",
+      "size_bytes": 2515,
+      "role": "candidate-output",
+      "copied_from": "trial-intake/outputs/sender-followup-draft.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionA/README.md",
+      "size_bytes": 168,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionA/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionA/aux_outputs/morphology_focus_qc_masks/morphology.ome.tif",
+      "size_bytes": 44,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionA/aux_outputs/morphology_focus_qc_masks/morphology.ome.tif",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionA/cell_feature_matrix/barcodes.tsv.gz",
+      "size_bytes": 45,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionA/cell_feature_matrix/barcodes.tsv.gz",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionA/cell_feature_matrix/features.tsv.gz",
+      "size_bytes": 66,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionA/cell_feature_matrix/features.tsv.gz",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionA/experiment.xenium",
+      "size_bytes": 86,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionA/experiment.xenium",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionB/README.md",
+      "size_bytes": 168,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionB/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionB/cell_feature_matrix/barcodes.tsv.gz",
+      "size_bytes": 45,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionB/cell_feature_matrix/barcodes.tsv.gz",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionB/cell_feature_matrix/features.tsv.gz",
+      "size_bytes": 66,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionB/cell_feature_matrix/features.tsv.gz",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/received/regionB/download-note.txt",
+      "size_bytes": 93,
+      "role": "synthetic-input",
+      "copied_from": "trial-intake/received/regionB/download-note.txt",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/sender-checksums.txt",
+      "size_bytes": 108,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-intake/sender-checksums.txt",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-intake/shared-folder-inventory.json",
+      "size_bytes": 2822,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-intake/shared-folder-inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/README.md",
+      "size_bytes": 1667,
+      "role": "archive-audit-note-or-result"
+    },
+    {
+      "path": "trial-scope/deliveries/additional/README.md",
+      "size_bytes": 381,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/additional/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/additional/expression.h5ad",
+      "size_bytes": 19712,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/additional/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/empty-candidate/README.md",
+      "size_bytes": 381,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/empty-candidate/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/empty-candidate/expression.h5ad",
+      "size_bytes": 19712,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/empty-candidate/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/explicit/README.md",
+      "size_bytes": 381,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/explicit/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/explicit/expression.h5ad",
+      "size_bytes": 19712,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/explicit/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/unclear/README.md",
+      "size_bytes": 381,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/unclear/README.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/deliveries/unclear/expression.h5ad",
+      "size_bytes": 19712,
+      "role": "synthetic-input",
+      "copied_from": "trial-scope/deliveries/unclear/expression.h5ad",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/delivery-agreements.md",
+      "size_bytes": 939,
+      "role": "synthetic-source-document",
+      "copied_from": "trial-scope/delivery-agreements.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/additional.full.json",
+      "size_bytes": 4283,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/additional.full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/additional.inventory.json",
+      "size_bytes": 1081,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/additional.inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/additional.metadata.json",
+      "size_bytes": 3177,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/additional.metadata.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/commands.log",
+      "size_bytes": 18675,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/commands.log",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/empty-candidate.full.json",
+      "size_bytes": 3399,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/empty-candidate.full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/empty-candidate.inventory.json",
+      "size_bytes": 1091,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/empty-candidate.inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/empty-candidate.metadata.json",
+      "size_bytes": 2618,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/empty-candidate.metadata.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/explicit.full.json",
+      "size_bytes": 4281,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/explicit.full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/explicit.inventory.json",
+      "size_bytes": 1077,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/explicit.inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/explicit.metadata.json",
+      "size_bytes": 3175,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/explicit.metadata.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/report.md",
+      "size_bytes": 6444,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/report.md",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/targeted-checks.json",
+      "size_bytes": 9489,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/targeted-checks.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/targeted_checks.py",
+      "size_bytes": 3046,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/targeted_checks.py",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/unclear.full.json",
+      "size_bytes": 4280,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/unclear.full.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/unclear.inventory.json",
+      "size_bytes": 1075,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/unclear.inventory.json",
+      "verbatim_copy": true
+    },
+    {
+      "path": "trial-scope/outputs/unclear.metadata.json",
+      "size_bytes": 3174,
+      "role": "candidate-output",
+      "copied_from": "trial-scope/outputs/unclear.metadata.json",
+      "verbatim_copy": true
+    }
+  ],
+  "coverage_statement": "Covers the listed trial artifacts and archive audit files as packaged. Excludes the root README.md, the manifest itself, and later coordinator additions such as execution-summary, deployment logs or test logs."
+}

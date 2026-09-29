@@ -1,0 +1,35 @@
+[
+  {
+    "cwd": "<workspace>/trial-intake",
+    "argv": [
+      "python",
+      "skills/xenium-data-intake/scripts/inventory.py",
+      "scan",
+      "received",
+      "--scope-key",
+      "two-region-delivery",
+      "--output",
+      "<workspace>/trial-intake/outputs/evidence/received-inventory.json"
+    ],
+    "command": "python skills/xenium-data-intake/scripts/inventory.py scan received --scope-key two-region-delivery --output <workspace>/trial-intake/outputs/evidence/received-inventory.json",
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"output\": \"<workspace>/trial-intake/outputs/evidence/received-inventory.json\"}\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "<workspace>/trial-intake",
+    "argv": [
+      "python",
+      "skills/xenium-data-intake/scripts/inventory.py",
+      "compare",
+      "shared-folder-inventory.json",
+      "<workspace>/trial-intake/outputs/evidence/received-inventory.json",
+      "--output",
+      "<workspace>/trial-intake/outputs/evidence/inventory-differences.json"
+    ],
+    "command": "python skills/xenium-data-intake/scripts/inventory.py compare shared-folder-inventory.json <workspace>/trial-intake/outputs/evidence/received-inventory.json --output <workspace>/trial-intake/outputs/evidence/inventory-differences.json",
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"output\": \"<workspace>/trial-intake/outputs/evidence/inventory-differences.json\"}\n",
+    "stderr": ""
+  }
+]
