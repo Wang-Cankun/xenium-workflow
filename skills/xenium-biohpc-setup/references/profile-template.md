@@ -73,9 +73,10 @@ Confirmed settings do not imply verified runtime readiness.
 ## Execution route
 
 - Login versus compute use:
-- Interactive route: <who obtains the node and how (e.g. user-run reservation tool),
-  how the agent reaches it (host alias), live check, and what to do when it is absent>
-- Batch route: <submission host and any directives the site requires or rejects>
+- Interactive route: <who provides the node and how (e.g. user-run reservation tool),
+  the host alias the agent uses, the live check>
+- Batch route: <submission host, default CPU and GPU partitions, directives the site
+  requires or rejects>
 - Standing resource rules: <partitions to prefer or avoid, site and group limits>;
   task resources are chosen per task and not saved.
 - Allocation lifecycle: <who starts, renews and ends allocations>

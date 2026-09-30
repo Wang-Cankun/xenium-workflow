@@ -811,3 +811,15 @@ composition produced PNG only and missed the panel-letter font. The house rules 
 row-tested titles, a stated selection rule, the comparator check, colour economy,
 italic genes and a text-overlap check; style, size minimum and export requirements
 are unchanged. One figure was reviewed; no user study or repeated trial was run.
+
+## Execution route choice
+
+An agent running in a separate runtime was asked to begin a CPU-only input check and
+descriptive QC on a new multiplexed-imaging delivery. No reservation was running.
+Following the old rule ("ask the user to reserve; do not self-allocate"), it stopped
+and asked the user to reserve a 24-hour GPU node. The same kind of step had already
+finished as a two-minute batch job on the default CPU partition. The usage reference,
+profile template and setup checklist now route scriptable steps to batch, which the
+agent submits and monitors itself, and keep the interactive route for live
+iteration. The ban on self-allocating interactive sessions is unchanged. The revised
+wording has not yet been re-run with that agent.

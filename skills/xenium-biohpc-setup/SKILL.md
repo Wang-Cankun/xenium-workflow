@@ -49,10 +49,11 @@ what the request or changed conditions require.
   account. Record quota/retention unknowns and scheduler evidence; visible queues do
   not prove allocation. Select dependency versions and job resources when the actual
   task establishes their need; a setup test is not a future analysis default. Record
-  the interactive route — how the user obtains an interactive node, how the agent
-  reaches it and who starts or renews it — and the batch route, then reuse them for
-  the requested work. Live allocation state is read from Slurm when needed, not
-  saved; follow the usage reference for session verification.
+  both [compute routes](references/biohpc-usage.md#route-each-step-batch-or-interactive):
+  the interactive route — how the user obtains a node, how the agent reaches it and
+  who renews it — and the batch route's submission host and default partitions.
+  Reuse them for the requested work. Live allocation state is read from Slurm when
+  needed, not saved.
 - [ ] **Save and hand off.** Persist findings and decisions using the profile rules
   below, read the saved file back, and link its actual location. Summarize what is
   settled, what remains open and the next useful action. A suggested next step does

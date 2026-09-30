@@ -78,28 +78,35 @@ a multi-GPU node leaves the other GPUs idle, and under-utilised GPU jobs may be
 cancelled. Record the verified partitions and the environment entry point in the
 profile, not the live node or job.
 
-For iterative inspection or debugging, follow the interactive route saved in the
-profile. When the user reserves nodes themselves — for example with a reservation
-tool that keeps a placeholder job and a host alias pointing at its node — work through
-that alias: confirm the reservation with `squeue -u <username>` and the shell's
-`hostname` before activating the environment and reading data. If the alias does not
-resolve or no reservation is running, ask the user to start or renew one; do not
-allocate a replacement yourself or fall back to login-node Python/R. Acquire an
-interactive session through the portal or Slurm only when the profile assigns that
-step to the agent; then choose a bounded period and task-sized CPUs/memory, and verify
-the running allocation and hostname in the same way. An allocation request alone does
-not move a login shell onto compute.
+### Route each step: batch or interactive
 
-Read live job, node and end-time information from Slurm when it is needed; do not
-keep it in a separate state file, because a saved node or job goes stale when the
-reservation changes. Follow the profile's allocation lifecycle preference; seeing a
-session does not authorize cancelling it.
+Two routes reach compute; pick one per step.
 
-For unattended work, prepare a batch script with resources, environment activation,
-working directory, command and output/error paths. Submit with `sbatch <script.sh>`
-and inspect the job state and logs. A job ID confirms submission, not successful
-completion. Acquiring either kind of allocation is task execution, not an automatic
-part of setup orientation.
+- **Batch** — any step that runs as a script: input checks, QC summaries,
+  preprocessing, figure batches. The agent writes the script, submits it with
+  `sbatch <script.sh>` from the login host, polls the job, and reads its logs and
+  outputs before the next step. The agreed task is the approval; submit without
+  asking again. The script sets resources and `--time`, activates the environment
+  (sourcing the shell environment file when the job starts clean), and names the
+  working directory, command and log paths. A job ID confirms submission; the logs
+  and outputs confirm the step.
+- **Interactive** — live iteration: debugging, or parameter trials judged one result
+  at a time. Reach the node through the route the profile records, typically a
+  user-run reservation behind a host alias. Confirm it with `squeue -u <username>`
+  and `hostname` before activating the environment. With no reservation running,
+  send scriptable steps to batch and ask the user to start or renew a reservation
+  for the rest. Interactive allocations come from the user unless the profile
+  assigns that step to the agent; then request a bounded period with task-sized
+  resources and verify it the same way. The request alone leaves the shell on the
+  login node.
+
+Send CPU-only steps to a CPU partition: a GPU partition holds the whole node and its
+GPUs, and under-utilised GPU jobs may be cancelled.
+
+Read live job, node and end-time information from Slurm when needed; a saved node or
+job goes stale when the reservation changes. Allocations end on their owner's
+schedule: follow the profile's lifecycle preference and leave other sessions running.
+Acquiring an allocation is task execution, not part of setup orientation.
 [Official Slurm guide](https://portal.biohpc.utsw.edu/content/guides/slurm/).
 
 ## Choose software and prepare only what is needed
