@@ -90,15 +90,21 @@ Two routes reach compute; pick one per step.
   (sourcing the shell environment file when the job starts clean), and names the
   working directory, command and log paths. A job ID confirms submission; the logs
   and outputs confirm the step.
-- **Interactive** — live iteration: debugging, or parameter trials judged one result
-  at a time. Reach the node through the route the profile records, typically a
-  user-run reservation behind a host alias. Confirm it with `squeue -u <username>`
-  and `hostname` before activating the environment. With no reservation running,
-  send scriptable steps to batch and ask the user to start or renew a reservation
-  for the rest. Interactive allocations come from the user unless the profile
-  assigns that step to the agent; then request a bounded period with task-sized
-  resources and verify it the same way. The request alone leaves the shell on the
-  login node.
+- **Interactive** — live iteration (debugging, parameter trials judged one result at
+  a time) and any data read, import or Python the login node must not carry. The
+  profile records who holds the node:
+  - *Agent-held*: [`node-reserve`](../scripts/node-reserve), installed in the owned
+    tools `bin/`. `node-reserve start [-p <partition>] [-t <time>]` prints
+    `JOB NODE`, reusing the user reservation named in `NODE_RESERVE_REUSE` first;
+    `node-reserve run '<command>'` runs there through `srun --overlap`;
+    `node-reserve stop` ends the node when the step is done. It holds one node at a
+    time within its time limits; `node-reserve --help` lists its settings.
+  - *User-held*: a user-run reservation behind a host alias. Confirm it with
+    `squeue -u <username>` and `hostname` before activating the environment. With
+    none running, send scriptable steps to batch and ask the user to reserve for the
+    rest.
+  A bare allocation request leaves the shell on the login node; work runs through
+  `node-reserve run`, the alias or `srun --overlap`.
 
 Send CPU-only steps to a CPU partition: a GPU partition holds the whole node and its
 GPUs, and under-utilised GPU jobs may be cancelled.

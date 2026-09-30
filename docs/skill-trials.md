@@ -823,3 +823,14 @@ profile template and setup checklist now route scriptable steps to batch, which 
 agent submits and monitors itself, and keep the interactive route for live
 iteration. The ban on self-allocating interactive sessions is unchanged. The revised
 wording has not yet been re-run with that agent.
+
+## Agent-held interactive node
+
+`scripts/node-reserve` holds one node with a placeholder job and runs commands on it
+through `srun --overlap` from the login host, so an agent without the user's local
+reservation tool or SSH alias can still keep data reads off the login node. On the
+target cluster it was run twice from the login host: start on the default CPU
+partition (10-minute limit), `run hostname` returned the compute node, `stop`
+cancelled the job and `status` came back empty; the second run used the installed
+skill copy with `NODE_RESERVE_REUSE` set. Reuse of a running user reservation, the
+pending-job guard and the time limits were not exercised live.

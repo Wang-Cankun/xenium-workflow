@@ -36,6 +36,7 @@ The skill files own intended agent behavior; they are not proof of runtime succe
 | Setup actions and profile lifecycle | [BioHPC setup](skills/xenium-biohpc-setup/SKILL.md) | Setup behavior changes |
 | Profile sections and saved checklist | [Profile template](skills/xenium-biohpc-setup/references/profile-template.md) | Required setup record changes |
 | BioHPC operational guidance | [Usage reference](skills/xenium-biohpc-setup/references/biohpc-usage.md) | Supported procedure or source changes |
+| Agent-held interactive node | [node-reserve](skills/xenium-biohpc-setup/scripts/node-reserve) | Start, reuse, run or limit behavior changes |
 | Download routes, credentials and transfer execution | [Data download](skills/xenium-data-download/SKILL.md) | A supported source or execution rule changes |
 | OneDrive/SharePoint access types and sync behavior | [SharePoint route](skills/xenium-data-download/references/onedrive-sharepoint.md) and [sync script](skills/xenium-data-download/scripts/sharepoint_sync.sh) | Access, endpoint, throttling or resume behavior changes |
 | Delivery scope, inventories, source/recipient comparison | [Data intake](skills/xenium-data-intake/SKILL.md) | Receiving behavior or evidence semantics change |

@@ -52,8 +52,11 @@ what the request or changed conditions require.
   both [compute routes](references/biohpc-usage.md#route-each-step-batch-or-interactive):
   the interactive route — how the user obtains a node, how the agent reaches it and
   who renews it — and the batch route's submission host and default partitions.
-  Reuse them for the requested work. Live allocation state is read from Slurm when
-  needed, not saved.
+  When the profile gives the agent the interactive node, install
+  [`scripts/node-reserve`](scripts/node-reserve) into the owned tools `bin/`, export
+  its settings in the shell environment file, and verify it with a short
+  `start` → `run hostname` → `stop`. Reuse the routes for the requested work. Live
+  allocation state is read from Slurm when needed, not saved.
 - [ ] **Save and hand off.** Persist findings and decisions using the profile rules
   below, read the saved file back, and link its actual location. Summarize what is
   settled, what remains open and the next useful action. A suggested next step does

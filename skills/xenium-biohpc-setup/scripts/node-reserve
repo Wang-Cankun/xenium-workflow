@@ -1,0 +1,95 @@
+#!/bin/bash
+# node-reserve: hold one compute node with a placeholder Slurm job and run commands on
+# it from the login host, so data reads, imports and Python stay off the login node.
+#
+#   node-reserve start [-p partition] [-t time]   reuse or start the held node; prints "JOB NODE"
+#   node-reserve run '<command>'                  run a command on the held node (srun --overlap)
+#   node-reserve status                           list held nodes
+#   node-reserve stop                             cancel the node this tool started
+#
+# Settings (environment variables):
+#   NODE_RESERVE_JOB        job name for nodes this tool starts (default node-reserve)
+#   NODE_RESERVE_REUSE      job name of a user-held reservation to reuse first; never cancelled here
+#   NODE_RESERVE_PARTITION  default partition (default 256GBv2)
+#   NODE_RESERVE_TIME       default time (default 4:00:00)
+# Limits: one node at a time; up to 24 h on CPU partitions and 8 h on GPU* partitions.
+set -euo pipefail
+
+OWN=${NODE_RESERVE_JOB:-node-reserve}
+REUSE=${NODE_RESERVE_REUSE:-}
+PART=${NODE_RESERVE_PARTITION:-256GBv2}
+TIME=${NODE_RESERVE_TIME:-4:00:00}
+CPU_MAX=$((24 * 3600))
+GPU_MAX=$((8 * 3600))
+
+usage() { sed -n '2,16p' "$0" | sed 's/^# \{0,1\}//'; }
+
+to_seconds() {  # D-HH:MM:SS | HH:MM:SS | MM:SS | MM
+  local t=$1 d=0 h=0 m=0 s=0 a b c
+  if [[ $t == *-* ]]; then d=${t%%-*}; t=${t#*-}; fi
+  IFS=: read -r a b c <<<"$t"
+  if [[ -n ${c:-} ]]; then h=$a; m=$b; s=$c
+  elif [[ -n ${b:-} ]]; then if [[ $d != 0 ]]; then h=$a; m=$b; else m=$a; s=$b; fi
+  else if [[ $d != 0 ]]; then h=$a; else m=$a; fi; fi
+  echo $((10#$d * 86400 + 10#$h * 3600 + 10#$m * 60 + 10#$s))
+}
+
+running() {  # $1 = job name -> "JOB NODE" of a running job, if any
+  [[ -n $1 ]] || return 0
+  squeue -h -u "$USER" -n "$1" -t RUNNING -o '%i %N' | head -1
+}
+
+held() { local r; r=$(running "$REUSE"); if [[ -n $r ]]; then echo "$r"; else running "$OWN"; fi; }
+
+cmd_start() {
+  local part=$PART time=$TIME opt max r job state node
+  while getopts "p:t:h" opt; do
+    case $opt in p) part=$OPTARG ;; t) time=$OPTARG ;; *) usage; exit 1 ;; esac
+  done
+  r=$(held)
+  if [[ -n $r ]]; then echo "$r"; return 0; fi
+  if [[ -n $(squeue -h -u "$USER" -n "$OWN" -t PENDING,CONFIGURING -o '%i') ]]; then
+    echo "A $OWN job is already pending; wait for it or run: node-reserve stop" >&2; exit 1
+  fi
+  if [[ $part == GPU* ]]; then max=$GPU_MAX; else max=$CPU_MAX; fi
+  if (( $(to_seconds "$time") > max )); then
+    echo "Time $time exceeds the $((max / 3600)) h limit for $part." >&2; exit 1
+  fi
+  job=$(sbatch --parsable -J "$OWN" -p "$part" -t "$time" -N 1 -o /dev/null --wrap 'sleep infinity')
+  job=${job%%;*}
+  echo "Submitted $job ($part, $time); waiting for a node..." >&2
+  while true; do
+    read -r state node < <(squeue -h -j "$job" -o '%T %N' || echo "GONE -")
+    case $state in
+      RUNNING) break ;;
+      PENDING|CONFIGURING) sleep 10 ;;
+      *) echo "Job $job ended in state ${state:-GONE}." >&2; exit 1 ;;
+    esac
+  done
+  echo "$job $node"
+}
+
+cmd_run() {
+  local r; r=$(held)
+  [[ -n $r ]] || { echo "No held node; run: node-reserve start" >&2; exit 1; }
+  exec srun --jobid="${r%% *}" --overlap --nodes=1 --ntasks=1 bash -lc "$*"
+}
+
+cmd_status() {
+  local names=$OWN
+  [[ -n $REUSE ]] && names="$REUSE,$OWN"
+  squeue -h -u "$USER" -n "$names" -o '%i %j %P %T %N %L' | sed '1i JOB NAME PARTITION STATE NODE TIME_LEFT'
+}
+
+cmd_stop() {
+  local ids; ids=$(squeue -h -u "$USER" -n "$OWN" -o '%i' | tr '\n' ' ')
+  if [[ -n ${ids// /} ]]; then scancel $ids; echo "Cancelled: $ids"; else echo "No $OWN job."; fi
+}
+
+case ${1:-} in
+  start) shift; cmd_start "$@" ;;
+  run) shift; [[ $# -gt 0 ]] || { usage; exit 1; }; cmd_run "$@" ;;
+  status) cmd_status ;;
+  stop) cmd_stop ;;
+  *) usage; [[ -z ${1:-} || $1 == -h || $1 == --help ]] || exit 1 ;;
+esac

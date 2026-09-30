@@ -73,8 +73,8 @@ Confirmed settings do not imply verified runtime readiness.
 ## Execution route
 
 - Login versus compute use:
-- Interactive route: <who provides the node and how (e.g. user-run reservation tool),
-  the host alias the agent uses, the live check>
+- Interactive route: <who holds the node: agent-held (`node-reserve` install path and
+  its settings) and/or user-held (reservation tool, host alias, live check)>
 - Batch route: <submission host, default CPU and GPU partitions, directives the site
   requires or rejects>
 - Standing resource rules: <partitions to prefer or avoid, site and group limits>;
