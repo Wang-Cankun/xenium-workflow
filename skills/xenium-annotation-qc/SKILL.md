@@ -1,6 +1,6 @@
 ---
 name: xenium-annotation-qc
-description: Check existing Xenium cell-type annotations against the data: per-label, per-group and per-cell evidence (lineage-marker support, distinctness, depth dependence, cell-QC flags, contamination, thinning stability, agreement with QC-level labels) with a status and reasons. It reports; it never relabels.
+description: "Check existing Xenium cell-type annotations against the data: per-label, per-group and per-cell evidence (lineage-marker support, distinctness, depth dependence, cell-QC flags, contamination, thinning stability, agreement with QC-level labels) with a status and reasons. It reports; it never relabels."
 ---
 
 # Xenium annotation QC

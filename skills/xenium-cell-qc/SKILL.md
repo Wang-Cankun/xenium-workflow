@@ -1,6 +1,6 @@
 ---
 name: xenium-cell-qc
-description: Choose and apply cell-level QC for Xenium data before and after clustering: per-cell flags with reasons, calibrated label transfer for low-information cells, composition sensitivity and contamination diagnostics. Descriptive metrics belong to xenium-quality-check.
+description: "Choose and apply cell-level QC for Xenium data before and after clustering: per-cell flags with reasons, calibrated label transfer for low-information cells, composition sensitivity and contamination diagnostics. Descriptive metrics belong to xenium-quality-check."
 ---
 
 # Xenium cell-level QC
