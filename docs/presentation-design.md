@@ -20,6 +20,59 @@ local claim/display accuracy. A page may provide context, evidence or interpreta
 for a later page; related checks can be combined and secondary work omitted. The
 meeting purpose determines whether the close is a brief outlook or a decision request.
 
+Revision records from a collaborator briefing and a technical teaching talk exposed
+further problems. Text claimed facts absent from the display; counts came from chat
+memory; a late rationale escaped the earlier audit. Local corrections left the same
+problem elsewhere. A technically complete teaching deck still left listeners to
+infer the problem, its consequence and the reason for each transition. Repeated
+restructuring also promoted a local example into the whole-talk thesis.
+
+The presentation branch now keeps the approved brief with the content source and
+separates claim checking from audience comprehension. Its slide-wording branch uses
+the visible finding: a result the presenter can locate in the display. A diagram's
+labels count toward reading load. Revision includes display selection and a sweep of
+general corrections, with new claims rechecked after late edits.
+
+An earlier working draft moved qualifications into footnotes. Later explicit user
+feedback rejected defensive footnotes. The consolidated rule narrows the claim or
+labels the display when a limit changes its meaning, keeps background qualifications
+in cues, and reserves the footer for necessary source URLs. Sharing copies still
+need enough visible context to stand alone.
+
+Other working-draft rules were narrowed to their demonstrated use: audience purpose
+determines whether a method needs a visual demonstration or quantitative scores;
+existing evidence tables can own numbers without a mandatory new registry; layout
+sketches do not require automatic approval. Exact fonts, filenames and project
+teaching examples stay in project inputs.
+
+Later collaboration-meeting revisions changed the account after a partner supplied
+its own analysis. The presenter narrowed the proposed work, removed grant-specific
+plans that had not been agreed, and distinguished available methods from local
+trials and delivered results. A site-count discrepancy also exposed a missing
+explanation of the compared populations. The workflow now checks for these changes
+before retaining a prior outline. Preserving decisions is conditional on the facts
+and responsibilities that supported them.
+
+A reported formatting problem affected text that the build represented as native
+text. An XML inspection found ordinary bold styling but did not establish successful
+editing in PowerPoint. The workflow keeps this as an unresolved application-level
+verification limit, rather than treating native objects as proof of usability.
+
+The independent production trial repeated problems already addressed in the feedback:
+abstract teaching statements, internal provenance footers, and reusable layouts that
+did not demonstrate a concrete construction. Classifying these only as execution
+errors left the completion criteria too permissive. The follow-up revision makes
+the slide-text route explicit before drafting, requires concrete objects and effects
+in demonstrations, and checks rendered compliance with accepted corrections before
+delivery. The audience review first reads the pages, then checks what the cues supply;
+an explanation to the reviewer cannot stand in for an explanation in the artifact.
+
+The authoring brief also carried the original purpose without all the later accepted
+visual and closing decisions. New sessions now recover those decisions into the
+project brief. This addresses an input-selection gap as well as writing behavior.
+The changes define observable review work; they do not establish improved generation
+until another artifact is produced and assessed.
+
 ## Sources and their limits
 
 | Source | What it contributes | Limit on use |
@@ -33,11 +86,11 @@ meeting purpose determines whether the close is a brief outlook or a decision re
 
 ## Adaptation decisions
 
-The connected narrative, title sequence and independent whole-talk challenge apply
-these ideas to an observational research update. Titles state supported findings
-or explicit limits. Descriptive evidence never needs to become a causal claim,
-a quality pass/fail decision or an unrequested biological recommendation.
-Necessary setup pages can keep neutral titles.
+The connected narrative and whole-talk challenge apply these ideas to research
+updates and technical teaching. Topic titles provide navigation, with a supported
+point in the body; conclusion titles remain an explicit style choice. Descriptive
+evidence never needs to become a causal claim, a quality pass/fail decision or an
+unrequested biological recommendation.
 
 Display selection follows the argument. This does not require novelty on every
 page, a ban on bullets, fixed numbers of reasons, or uniform consulting-style
@@ -54,4 +107,5 @@ that a meaningful title makes a figure unnecessary is replaced by the relevant
 question: does the displayed evidence actually support the title?
 
 Behavioral and artifact checks are recorded in [skill trials](skill-trials.md).
-The observed weakness and repair are not a controlled old/new performance study.
+This consolidation uses retrospective revision evidence, not a new controlled
+old/new performance study.

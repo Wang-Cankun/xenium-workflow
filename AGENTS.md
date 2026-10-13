@@ -53,6 +53,7 @@ The skill files own intended agent behavior; they are not proof of runtime succe
 | Cell composition inputs, denominator and model branches | [Composition](skills/xenium-composition/SKILL.md) | Count, plot or sccomp behavior changes |
 | Figure design, shared style, captions and final exports | [Xenium figures](skills/xenium-figures/SKILL.md) | Plotting or final-figure behavior changes |
 | Scientific narrative and DOCX/PPTX assembly | [Xenium reporting](skills/xenium-reporting/SKILL.md) | Report wording, production or figure-consumption behavior changes |
+| Slide narrative, revision and sharing editions | [Presentation workflow](skills/xenium-reporting/references/presentation.md), [slide text](skills/xenium-reporting/references/slide-text.md) and [sharing script](skills/xenium-reporting/scripts/share_copy.py) | Audience review, slide wording, iteration or sharing behavior changes |
 | Local niches and differential enrichment | [QUICHE](skills/xenium-quiche/SKILL.md) | Coordinate boundary, backend or DA behavior changes |
 | Private-term check on commits and tree scans | [Pre-commit hook](.githooks/pre-commit) | Matching or scan scope changes |
 
@@ -111,6 +112,10 @@ pyarrow, SciPy, scikit-learn and h5py on synthetic labelled output directories.
 Composition count changes use `python tests/test_composition_cli.py` with NumPy/h5py.
 Composition figure changes use `python tests/test_plot_composition.py` with the
 existing Matplotlib/NumPy/pandas plotting runtime; project export and visual review
+remain separate checks.
+Presentation sharing changes use `python tests/test_share_copy.py` with python-pptx
+on a disposable deck: notes removal, native content and original preservation,
+document properties and output protection. Rendering and native PowerPoint behavior
 remain separate checks.
 QUICHE contract changes use `python tests/test_quiche_workflow.py`; actual backend
 smokes in `tests/test_quiche_backend.py` require their explicit environment flags

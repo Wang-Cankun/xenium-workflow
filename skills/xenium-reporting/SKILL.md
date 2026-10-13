@@ -37,15 +37,10 @@ another plot inside the DOCX/PPTX builder.
   [report structure and DOCX production](references/report-layout.md). The existing
   [builder](scripts/build_report.py) creates native Word text/tables, inserts final
   PNG figures and converts the DOCX to PDF using the selected existing renderer.
-- For slides, read [PPTX production](references/presentation.md) before designing
-  the content. Develop the whole-talk narrative with independent input before
-  pagination, or preserve the user-approved outline during revision. For a data
-  status briefing, follow its completed-check reporting guidance. Check what the
-  audience will understand, then assemble
-  final figures with concise speaking cues. For a supplied/configured template,
-  use the [rebuild workflow](references/template-rebuild.md) and bundled builder
-  with saved project inputs. Reuse the approved content on template-only rebuilds.
-  DOCX and PPTX are alternatives unless both were requested.
+- For slides, including revisions and sharing copies, read
+  [PPTX production](references/presentation.md) before changing content. It owns
+  narrative, audience review and iteration, and routes to slide wording and
+  template rebuilding. DOCX and PPTX are alternatives unless both were requested.
 
 Use available document tooling for the selected format; the bundled report builder
 and production references describe the required behavior without depending on an

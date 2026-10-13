@@ -598,6 +598,169 @@ scoped application, not evidence that the selected summaries establish overall
 sample quality. Scripts, methods, histogram evidence and review remain with the
 project. Affected links/frontmatter and whitespace checks pass.
 
+## Presentation revision consolidation
+
+Reviewed recent Claude Code and Codex session JSONL, retrieved relevant passages
+through memory search, and compared the existing presentation guidance with an
+uncommitted working copy used during slide production. Read the project content
+generator, rebuild entry, delivery/source instructions and the bundled template
+builder. Private transcripts, project artifacts and source paths remain outside
+this public repository.
+
+The user corrections support preserving the agreed main thread, explaining the
+audience's missing premises, reducing reading load across text and figures,
+applying general corrections throughout a deck, removing defensive footnotes, and
+checking the actual rendered revision. The working copy also supplied the slide-text
+branch and notes-removal utility. Its automatic figure-approval gate, compulsory
+number registry and universal removal of method scores were not retained. Project
+examples, exact typography and filenames remain project choices.
+
+**Behavioral walkthrough (author self-review).** Starting at README and the reporting
+skill, traced these requests through the revised branch:
+
+- Revise a teaching deck whose local example has displaced its purpose: recover the
+  approved brief, inspect transitions and display selection, and check audience
+  understanding separately from claim accuracy.
+- Correct one overloaded page: identify whether the correction generalizes, inspect
+  all matching pages, retain meaningful qualifications in claims/displays, and review
+  full-size renders after updating the owning source.
+- Change only a template: reuse approved content and use the existing rebuild route.
+- Produce a sharing edition: choose its pages in the content source, preserve the
+  presenter build, remove notes into a new file, and retain visible interpretive
+  context. The sharing script does not remove appendix slides.
+
+**Script check.** `tests/test_share_copy.py` ran in an existing python-pptx runtime on
+a disposable PPTX containing text, a native table, an image and speaker notes. The
+CLI removed note parts, set author/title properties, preserved slide XML, image and
+layout/master bytes and the original file, and refused an existing destination.
+No checksums were calculated.
+
+**Limits.** This is a retrospective consolidation and a self-reviewed instruction
+walkthrough, not a fresh-agent comprehension trial or an old/new benchmark. The
+synthetic sharing check does not establish preservation of every advanced PowerPoint
+feature. No research analysis, new deck rendering or native PowerPoint test was run.
+The separate working checkout was read without modifying its uncommitted edits.
+
+Subsequent source review covered the later collaboration-meeting JSONL and project
+records on the working machine. Direct corrections called for rebriefing after a
+partner analysis changed the presenter's expected role, removing unagreed grant-level
+plans, distinguishing tool capability from actual use, and explaining mismatched
+inventory populations. A formatting complaint remained unresolved after XML-only
+inspection. These findings added scoped guidance and an explicit limit on editability
+claims. Final deliverable discovery also found a later manually saved file beyond
+the numbered builds; version suffixes alone did not identify the final deck.
+
+A fresh-context skill reviewer, without the final decks, checked the revised route
+against criteria from these corrections. It identified two cross-branch conflicts:
+shared writing guidance fixed the audience/language to biological collaborators and
+English, and method examples unconditionally required a population distribution.
+The first now follows the agreed brief, with a biological-results default only when
+needed; the second applies when an observation represents a larger dataset. The
+reviewer rechecked both repairs and found the route ready for a production trial.
+Explanatory-diagram editability remained a non-blocking observation for that trial.
+
+## Independent presentation production
+
+After the instruction review above, a fresh-context author received a frozen skill
+snapshot, the original teaching brief, a native template and selected source evidence.
+It did not receive the finished reference deck, refinement history or review criteria.
+It produced a 22-page presenter deck with English cues, a notes-free sharing copy,
+source files, final figures, full-page renders and a contact sheet. Planned duration
+was about 29 minutes; no rehearsal measured it. Content, package and geometry checks
+passed. The author inspected every page of the first build and the four changed pages
+of its final build; the other rendered pages were unchanged. The output was frozen
+before comparative feedback.
+
+Two further fresh-context reviewers received neutrally labelled decks, the brief,
+criteria and evidence, without an identity key or each other's conclusions. The
+audience reviewer inspected all 22 candidate pages and all 19 reference main-talk
+pages, with the reference's four appendices reviewed separately. The claims reviewer
+traced consequential statements to the supplied records and official sources.
+
+The candidate better connected the recurring task, environment failures, cross-session
+handoff and maintenance, and preserved the limits of its local trial evidence. The
+reference better showed concrete instruction and script examples and used a stable,
+progressively highlighted architecture diagram. The candidate's abstract construction
+pages lacked an excerpt listeners could adapt. The reference omitted the requested
+speaking cues and compressed some local trial, assay and caching claims beyond what
+their sources support. Neither deck was treated as an infallible answer key.
+
+Author adjudication also found internal source paths in candidate footers despite the
+existing slide-text rule, and explanatory sentences embedded in diagram images. These
+are execution or editability limitations, not evidence that more duplicate rules are
+needed. The instruction repair is limited to showing a small worked artifact when
+teaching construction. That post-trial wording did not produce the frozen candidate;
+its effect has not been tested in another generation. The reference deck was unchanged.
+
+This is partial transmission of the revision lessons, not demonstrated parity with
+the finished reference. It is one production task, with separate contexts from the
+same model family, not independent model families or an old/new controlled trial.
+The reference benefited from repeated human feedback and additional project context.
+The skill itself was informed by that project's feedback, so this is not held-out
+generalization. No native PowerPoint editing, audience comprehension experiment,
+live research analysis or timed delivery was tested. Private decks, raw history and
+detailed comparison reports remain in the consuming project.
+
+### Follow-up: recurring writing failures
+
+The user challenged treating repeated violations solely as execution failures.
+Re-read the original technical-talk requests and later direct corrections, then
+compared them with the frozen candidate's text, diagrams and authoring brief. The
+brief conveyed the initial purpose but omitted later accepted visual and closing
+choices. The revised production branch now carries those decisions into new-session
+briefs and makes the accepted-correction review part of delivery. The slide-text
+branch specifies concrete wording and explicit destinations for internal provenance.
+
+**Editorial walkthrough, not a new generation:**
+
+| Observed case | Action under the revised instructions | Evidence needed to close it |
+|---|---|---|
+| Internal repository paths repeatedly appear in source footers | Move internal provenance to notes/source records; leave only necessary direct URLs visible | Inspect every affected rendered footer, including image text |
+| Script construction is shown as generic project/script/check stages | Show a small source-backed command or output contract and the decision it implements | A listener can locate what to adapt, not only name the stages |
+| A page says different information needs different homes | Name the information, storage decision and practical consequence | Wording and display explain how the next session continues |
+| Multiple tables classify checks, limits and responsibilities | Keep comparisons whose dimensions serve the audience question; move secondary explanations to cues or split the account | Read the displayed labels while following the cues; preserve necessary claim scope |
+| A fresh author returns to a general advice ending after a later closing choice | Recover the latest accepted closing choice into the brief | The final sequence and correction record account for that choice |
+
+The walkthrough locates failures in existing artifacts and specifies their repairs;
+it does not claim that a fresh agent followed the new wording. No frozen deck or
+earlier trial input was changed. Repository link, frontmatter, privacy and whitespace
+checks cover the edited guidance, not comprehension or PowerPoint behavior.
+
+### Second independent production
+
+A new-context author repeated the technical-talk task with the revised instructions
+and a brief carrying the later accepted visual and closing decisions. It received
+the original template and source evidence, with prior reporting-trial conclusions
+removed from supporting documents. It did not see earlier decks or reviewers' findings.
+It produced and froze a 24-page presenter deck, a notes-free sharing edition, cues,
+source files, full renders and a correction-to-page record. Planned duration was
+about 28 minutes, not rehearsed. The author reviewed all pages and rechecked changes;
+content, package and layout checks passed.
+
+Two fresh-context reviewers compared this output with the prior independent draft
+and the finished reference under neutral labels, without the identity key or each
+other's findings. They found more concrete instruction, command and handoff examples,
+a continuous architecture diagram with the execution foundation visible, internal
+provenance moved out of footers, native slide explanations and the agreed project
+closing. The audience reviewer preferred this output as the basis for further work,
+while retaining a reading-load concern for several consecutive tables. The reference's
+skill-file example remained more direct.
+
+Both reviewers independently found the same remaining scope error: a closing path
+made a final figure an obligatory step between metric evidence and the report,
+although the source task requires figures only when requested. The frozen output
+retains this finding; an optional figure branch is the specific proposed repair.
+The author's completed correction checklist did not detect it. Sharing checks found
+no notes, equivalent normalized slide XML and preserved media; native application
+editing was not tested.
+
+This trial changed both the skill and the brief, so it cannot isolate a skill-only
+effect. The older independent author had not received all the later decisions now
+in the brief. Separate contexts came from the same model family. There was no
+audience experiment, timed delivery, live research execution or new universal quality
+score. The trial outputs remain private project artifacts; the runtime guidance
+was not changed again in response to this comparison.
+
 ## Imported copies and user-managed reservations
 
 A live QC run from an imported copy exposed three gaps: imported copies omit the ignored

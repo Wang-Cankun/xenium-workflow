@@ -1,16 +1,16 @@
 # Scientific account
 
-
-Write for a biological collaborator who knows the field but not this dataset or
-pipeline. Establish what was compared and the main observations before polishing
-sentences.
+Use the agreed audience and language. For biological results reports without a more
+specific brief, write for a collaborator who knows the field but not this dataset or
+pipeline. Establish what was examined and the main observations before polishing
+sentences. The selected production branch owns the narrative form of a talk or report.
 
 Give each paragraph one main job. Orient the reader in its opening sentence:
 usually lead with the observation, or briefly introduce the question or measurement
 needed to understand it. Develop related observations together before changing topic. Explain how results
 extend, contrast with or qualify one another, preserving differences in the
-questions they answer. Use plain, precise scientific
-English with concrete subjects, familiar verbs and stable terms. Define unfamiliar
+questions they answer. Use plain, precise language
+with concrete subjects, familiar verbs and stable terms. Define unfamiliar
 group labels and technical terms from the supplied context. Sentence length and
 active or passive voice should serve the topic and its relationships. Keep clear
 sentences that already work.
@@ -34,18 +34,19 @@ Report a sensitivity comparison by naming
 what changed and what happened to the result. Routine execution and verification
 records belong in the project record.
 
-Use sentence-case titles that identify the quantity and comparison; a result title
+For scientific figures, use sentence-case titles that identify the quantity and comparison; a result title
 must be supported by the displayed evidence. Keep axes, units, category keys, panel
 letters and scale bars in the artwork. Put explanations in the caption: a short
 title, panels in order, the denominator, aggregation, symbols, n and what it counts,
 and any intervals or tests shown. A caption should support independent reading
 without reproducing the full methods.
 
-Read the account once as a collaborator: can the reader follow what was compared,
+For results narratives, read the account once as the intended audience: can the reader follow what was compared,
 what was observed and how each result advances the question without reconstructing
 the pipeline? Repair information order and unclear connections before polishing
 individual words. Read result text, displays and captions together to preserve
-meaning across them; use the production branch for build checks.
+meaning across them. For other accounts, use the production branch's audience
+review; each production branch also owns its build checks.
 
 Writing references: [Nature Education: Effective Writing](https://www.nature.com/scitable/topicpage/effective-writing-13815989/)
 (archived teaching material), [Mensh and Kording](https://doi.org/10.1371/journal.pcbi.1005619)
